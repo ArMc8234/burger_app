@@ -5,6 +5,11 @@ class BurgersControllerTest < ActionDispatch::IntegrationTest
     @burger = burgers(:one)
   end
 
+  test "should get root" do
+    get "/"
+    assert_response :success
+  end
+
   test "should get index" do
     get burgers_url
     assert_response :success
